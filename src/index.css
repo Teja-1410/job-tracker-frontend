@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -670,11 +675,13 @@ button:hover {
   top: 100%;
   left: 0;
   right: 0;
+  width: 100%;
   background: #0d1626;
   padding: 12px 20px 16px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   gap: 2px;
+  box-sizing: border-box;
 }
 
 .nav-links-open a {
