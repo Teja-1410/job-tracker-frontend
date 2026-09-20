@@ -477,6 +477,11 @@ function Home() {
           relying on chaotic WhatsApp groups. Staff claim jobs fairly, managers
           track everything live, and no one gets overloaded.
         </p>
+        <p className="demo-note">
+    This is a portfolio demo project. Core features — authentication,
+    role-based job dispatch, and the fair workload system — are fully
+    functional. Booking and payments are planned next steps.
+  </p>
       </section>
 
       <footer id="contact" className="footer">

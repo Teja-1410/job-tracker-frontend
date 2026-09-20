@@ -790,3 +790,12 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.demo-note {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #7c8ea0;
+  font-style: italic;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+}
