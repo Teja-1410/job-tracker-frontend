@@ -23,7 +23,7 @@ function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3000/jobs")
+    fetch("https://job-tracker-api-v66b.onrender.com/jobs")
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
@@ -44,7 +44,7 @@ function Home() {
 
   useEffect(() => {
     if (token && (role === "manager" || role === "owner")) {
-      fetch("http://localhost:3000/users/staff", {
+      fetch("https://job-tracker-api-v66b.onrender.com/users/staff", {
         headers: { Authorization: "Bearer " + token }
       })
         .then((res) => res.json())
@@ -54,7 +54,7 @@ function Home() {
 
   function handleLogin(e) {
     e.preventDefault();
-    fetch("http://localhost:3000/login", {
+    fetch("https://job-tracker-api-v66b.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password })
@@ -77,7 +77,7 @@ function Home() {
 
   function handleSignup(e) {
     e.preventDefault();
-    fetch("http://localhost:3000/signup", {
+    fetch("https://job-tracker-api-v66b.onrender.com/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: signupName, email, password, role: signupRole })
@@ -103,7 +103,7 @@ function Home() {
 
   function handleCreateJob(e) {
   e.preventDefault();
-  fetch("http://localhost:3000/jobs", {
+  fetch("https://job-tracker-api-v66b.onrender.com/jobs", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -126,7 +126,7 @@ function Home() {
 }
 
   function handleClaimJob(jobId) {
-    fetch("http://localhost:3000/jobs/" + jobId, {
+    fetch("https://job-tracker-api-v66b.onrender.com/jobs/" + jobId, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -145,7 +145,7 @@ function Home() {
   }
 
   function handleUpdateStatus(jobId, newStatus) {
-    fetch("http://localhost:3000/jobs/" + jobId, {
+    fetch("https://job-tracker-api-v66b.onrender.com/jobs/" + jobId, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -172,7 +172,7 @@ function Home() {
     return;
   }
 
-  fetch("http://localhost:3000/jobs/" + jobId + "/assign", {
+  fetch("https://job-tracker-api-v66b.onrender.com/jobs/" + jobId + "/assign", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
