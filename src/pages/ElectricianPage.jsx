@@ -41,7 +41,7 @@ function handleBookClick() {
     <div>
       <nav className="navbar">
         <Link to="/" className="nav-logo">⚡ Job Tracker</Link>
-        <div className="nav-links">
+        <div className="detail-nav-links">
           <Link to="/">Home</Link>
         </div>
       </nav>

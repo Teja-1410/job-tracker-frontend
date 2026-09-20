@@ -806,3 +806,19 @@ button:hover {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 16px;
 }
+
+.detail-nav-links {
+  display: flex;
+}
+
+.detail-nav-links a {
+  color: #d7e3ee;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.detail-nav-links a:hover {
+  color: #f0a202;
+}
